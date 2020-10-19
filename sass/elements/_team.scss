@@ -1,0 +1,159 @@
+.teams {
+	padding: 116px 0 75px;
+}
+
+.teams-single {
+	padding: 116px 0 120px;
+}
+
+.teams-two {
+	padding-top: 116px;
+	padding-bottom: 120px;
+
+	.scroll-circle {
+		right: 0;
+		left: auto;
+		top: 25%;
+		z-index: -1;
+	}
+}
+
+.team-member {
+	margin-bottom: 70px;
+	max-width: 370px;
+	margin: 0 auto 70px;
+
+	.member-avater {
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+
+		svg {
+			position: absolute;
+			bottom: -100%;
+			left: 0;
+			transition: all 0.6s ease-in-out;
+
+			&.layer-two {
+				transition-delay: 0.3s;
+			}
+
+			&:hover {
+				bottom: 0;
+			}
+		}
+
+
+		.member-social {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 333;
+			opacity: 0;
+			transition: all 0.4s ease-in-out;
+			transition-delay: 0.3s;
+
+			li {
+				display: inline-block;
+				margin-right: 5px;
+
+				a {
+					display: inline-block;
+					height: 46px;
+					width: 46px;
+					line-height: 46px;
+					text-align: center;
+					color: #fff;
+					border: 2px solid #fff;
+					border-radius: 50%;
+
+					&:hover {
+						background: #fff;
+						color: $color__theme;
+						box-shadow: 0px 20px 20px 0px rgba(79, 35, 35, 0.2);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			svg {
+				bottom: 0;
+			}
+
+			.member-social {
+				bottom: 40px;
+				opacity: 1;
+			}
+		}
+	}
+
+	.team-info {
+		text-align: center;
+		padding-top: 25px;
+
+		.name {
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		.job {
+			font-size: 16px;
+			color: #797687;
+			font-weight: 400;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.teams, .teams-two {
+		padding: 76px 0 50px;
+	}
+
+	.teams-two  {
+		padding: 76px 0 80px;
+	}
+
+	.team-member {
+		margin-bottom: 40px;
+	}
+
+	.section-small {
+		margin: 0;
+	}
+
+	.teams-single {
+		padding: 76px 0 80px;
+
+		.button-container {
+			margin-top: 10px;
+		}
+	}
+
+	.teams-two {
+		.scroll-circle {
+			max-width: 320px;
+		}
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.teams-two {
+		.scroll-circle {
+			max-width: 330px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+
+	.scroll-circle {
+		display: none;
+	}
+}
